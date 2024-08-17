@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/background79.jpg);
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__titte {
+  text-align: center;
+  font-size: 50px;
+  color: #0e3b38;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+}
+
+.inner__img {
+  width: 100%;
+  width: 600px;
+  height: 435px;
+  object-fit: contain;
+  padding: 0 90px;
+}
+
+.btn {
+  color: #ffffff;
+  background-color: #0e3b38;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 15px;
+  margin: 60px auto;
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0,.7);
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #155753;
+}
