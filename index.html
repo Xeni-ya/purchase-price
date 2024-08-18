@@ -9,15 +9,28 @@
 <body>
   <div class="container">
     <h1 class="container__titte">
-      Галерея 
+      Картины Винсента Ван Гога
     </h1>
-    
     <div class="inner">
-      <img src="./assets/img/1688014975_1.png" alt="Ирисы" class="inner__img">
+      <div class="inner__item">
+        <img src="./assets/img/1688014975_1.png" alt="Ирисы" class="inner__img">
+        <h2 class="inner-subtitle__left">
+          "Ирисы"
+          <br>
+          <i class="inner__date">1889 г.</i>
+        </h2>
+      </div>
+      <div class="inner__item">
+        <h2 class="inner-subtitle__right">
+          "Пшеничное поле с кипарисом"
+          <br>
+          <i class="inner__date">1889 г.</i>
+        </h2>
+      </div>
       <img src="./assets/img/1688014966_3.png" alt="Пшеничное поле с кипарисом" class="inner__img">
     </div>
 
-    <button class="btn">
+    <button class="btn" onclick="calculateTotalPrice()">
       Узнать стоимость
     </button>
   </div>
