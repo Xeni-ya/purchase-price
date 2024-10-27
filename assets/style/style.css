@@ -76,3 +76,8 @@ body {
   color: #ffffff;
   background-color: #155753;
 }
+
+.purchase-price {
+  font-size: 1.7em;
+  color: #0e3b38;
+}

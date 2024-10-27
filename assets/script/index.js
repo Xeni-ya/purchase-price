@@ -2,6 +2,8 @@
 // Функция должна производить расчет общей стоимости покупки, умножая количество товаров на их цену. Затем полученное значение необходимо отформатировать с использованием функции toLocaleString('ru-RU'), чтобы отобразить разделитель тысяч и соответствующую валюту (рубли). Про toLocaleString().
 // Наконец, выведите результат расчета в виде сообщения с помощью функции alert(). Сообщение должно содержать текст "Стоимость покупки: [форматированное значение] рублей".
 
+// ========= Первый вариант =========
+
 // const calculateTotalPrice = (quantity = 2, price = 15000000) => {
 //   const totalCost = quantity * price;
 //   const formatPrice = totalCost.toLocaleString('ru-RU');
@@ -12,17 +14,25 @@
 //   calculateTotalPrice();
 // });
 
+
+// ========= Второй вариант =========
+
 const calculateTotalPrice = (quantity = 2, price = 15000000) => {
   const totalCost = quantity * price;
   const formatPrice = totalCost.toLocaleString('ru-RU');
 
-  const divPurchasePrice = document.getElementById('purchase-price');
-
-  const newElement = document.createElement('p');
-  newElement.textContent = `Стоимость покупки: ${formatPrice} рублей`;
-
-  divPurchasePrice.append(newElement);
+  // Обновляем содержимое элемента purchase-price
+  let purchasePriceDiv = document.querySelector('.purchase-price')
+  purchasePriceDiv.textContent = `Стоимость покупки: ${formatPrice} рублей`;
 }
+// Обработчик события
+const handleButtonClick = () => {
+  calculateTotalPrice();
+};
+
+// Привязываем обработчик события к кнопке
+document.querySelector('.btn').onclick = handleButtonClick;
+
 document.addEventListener('DOMContentLoaded', () => {
   calculateTotalPrice();
 });
