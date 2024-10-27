@@ -32,7 +32,3 @@ const handleButtonClick = () => {
 
 // Привязываем обработчик события к кнопке
 document.querySelector('.btn').onclick = handleButtonClick;
-
-document.addEventListener('DOMContentLoaded', () => {
-  calculateTotalPrice();
-});
